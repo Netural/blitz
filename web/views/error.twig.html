@@ -1,0 +1,14 @@
+{% extends "layouts/default.twig.html" %}
+
+{% block title %}Error{% endblock %}
+{% block head %}
+	{{ parent() }}
+{% endblock %}
+
+{% block content %}
+
+	<div class="uk-container uk-container-center">
+		<h1 class="uk-text-center">{{ message }}</h1>
+	</div>
+
+{% endblock %}

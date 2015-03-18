@@ -1,0 +1,137 @@
+{
+	"metatitle": "TITAN ONE Signature Collection",
+	"metadesc": "TITAN ONE Signature Collection",
+	"facebook_share": "I think the new signature collection from Silhouette: the Titan ONE one-piece innovation is great! You can even try it on virtually!",
+	"twitter_share": "The new Titan ONE one-piece innovation from @silhouette_1964. #SilhouetteTitanONE",
+	"pinterest_share": "The new signature collection from Silhouette: the Titan ONE one-piece innovation. Try it on virtually now!",
+	"mail_share": "Discover the new signature collection from Silhouette: the Titan ONE one-piece innovation. Try it on virtually now!",
+	"navi": {
+		"home": "HOME",
+		"theone": "THE ONE",
+		"facts": "FACTS",
+		"interviews": "INTERVIEWS",
+		"wisdom": "WISDOM"
+	},
+	"hero": {
+		"title": "I AM THE ONE",
+		"description": "The new Titan ONE one-piece innovation. Eyewear at the pinnacle of design."
+	},
+	"buttons": {
+		"try_on": "TRY IT ON NOW",
+		"try_on_url": "http://www.silhouette.com/titan_one_preview",
+		"find_dealer": "FIND A RETAILER",
+		"find_dealer_url": "http://www.silhouette.com/retailer_search/"
+	},
+	"labels": {
+		"share": "SHARE:"
+	},
+	"collage": {
+		"box1": {
+			"capital": "O",
+			"body": "One-Piece-Innovation"
+		},
+		"box2": {
+			"capital": "N",
+			"body": "Natural lines form a harmonious unity between the wearer and the eyewear"
+		},
+		"box3": {
+			"capital": "E",
+			"body": "Excellent craftmanship - made in Austria"
+		}
+	},
+	"reel": {
+		"title": "FACTS OF THE TITAN ONE",
+		"points": [
+			{
+				"left": "33%",
+				"top": "28%",
+				"title": "One-Piece-Innovation",
+				"class": "t-top",
+				"body": "Integrates nose bridge and temples in one piece"
+			},
+			{
+				"left": "48%",
+				"top": "57%",
+				"title": "Lower wave bar design",
+				"class": "t-lower",
+				"body": "Airy, sophisticated, future-driven"
+			},
+			{
+				"left": "66%",
+				"top": "55%",
+				"title": "High-Tech-Titanium",
+				"class": "t-lower",
+				"body": "Strong, yet extremely lightweight and soft"
+			}
+		]
+	},
+	"colors": {
+		"shiny_silver": "Shiny Silver",
+		"matt_cold": "Matt Gold",
+		"dart_silver_matt": "Dark Silver Matt",
+		"dart_silver_shiny": "Dark Silver Shiny"
+	},
+	"stories": [
+		{
+			"headline": "„GOOD DESIGN IS ALWAYS AUTHENTIC“",
+			"subheadline": "Henrietta Thompson, Editor-at-Large at Wallpaper magazine",
+			"longtext": "For Henrietta Thompson, good design is always authentic, however this must not detract from the enjoyment of the product. This is also the case with the Titan ONE, which brings the personality of the wearer to the fore and allows it to shine through.",
+			"link": "Read the interview with Henrietta",
+			"link_href": "http://issuu.com/silhouetteinterntaionalschmied/docs/00_us",
+			"direction": "t-story-left",
+			"image": "images/content/content7.jpg",
+			"name": "Henrietta"
+		},
+		{
+			"headline": "„SUCCESSFULLY BALANCING THE EXPERIMENTAL WITH THE PRACTICAL“",
+			"subheadline": "Alvin Huang, Founder and Design Principal of Synthesis Design + Architecture",
+			"longtext": "Alvin Huang is passionate about investigating novel and expressive forms that challenge design conventions and are informed by structural, fabrication, and optical criteria. He is of the “form follows performance” school and regards design in this aspect. He describes Titan ONE as the epitome of expressing more with less.",
+			"link": "Read the interview with Alvin Huang",
+			"link_href": "http://litestyle.silhouette.com/2015/02/titan-one-alvin-huang/",
+			"direction": "t-story-right",
+			"image": "images/content/alvin_huang.jpg",
+			"name": "Huang"
+		},
+		{
+			"headline": "„DESIGN AS AN EXERCISE IN CREATING VALUE“",
+			"subheadline": "Jonas Ravlo Stokke and Oystein Austad, Designer & Founder of Stokke Austad",
+			"longtext": "Revealing the essence of each design the trained industrial designers focus on creating holistic and durable solutions. Both intensively studied the one-piece phenomenon, as with their own designs and were among the first to get in touch with Titan ONE.",
+			"link": "Read the interview",
+			"link_href": "http://litestyle.silhouette.com/2015/02/titan-one-stokke-austad/",
+			"direction": "t-story-right",
+			"image": "images/content/stokke_austad.jpg",
+			"name": "Austad"
+		},
+		{
+			"headline": "„MINIMIZING SYMBOLS TO MAXIMIZE SIGNIFICANCE AND RELEVANCE“",
+			"subheadline": "Eisuke Tachikawa, Architect, Designer and Founder of NOSIGNER",
+			"longtext": "At his Studio Nosigner in Tokyo, Eisuke Tachikawa grapples primarily with designs that can positively change society and the future. In terms of the minimal amount of material used, Titan ONE is a sustainable design concept. Not only is its unique design convincing, but so is its timeless presence.",
+			"link": "Read the interview with Eisuke",
+			"link_href": "http://litestyle.silhouette.com/2015/02/titan-one-eisuke-tachikawa/",
+			"direction": "t-story-left",
+			"image": "images/content/eisuke_tachikawa.jpg",
+			"name": "Tachikawa"
+		}
+	],
+	"wisdom": {
+		"title": "THE WISDOM OF THE ONE",
+		"description": "Vision, intelligence, creativity, ingenuity - the Titan ONE combines all of these. Every ONE projects those values into the world."
+	},
+	"imprint": "Company information",
+	"imprint_link": "http://www.silhouette.com/imprint",
+	"copyright": "Silhouette 2015",
+	"contact": "Contact",
+	"contact_link": "http://www.silhouette.com/contact",
+	"quotes": {
+		"quote1": "THE ONE IS PART OF YOU, AS YOU ARE PART OF IT.",
+		"quote1_author": "adapted from Plotinus, extract. R. Harder, Ffm, 1958, page 75",
+		"quote2": "THE ONE BRINGS HAPPINESS AND ERADICATES DOUBT.",
+		"quote2_author": "adapted from the Third Patriarch of Zen, in Huxley, The Perennial Philosophy, page 110",
+		"quote3": "THE ONE IS NOT SECOND BEST; IT IS THE MOST MEANINGFUL.",
+		"quote3_author": "adapted from John Maeda, Laws of simplicity, Law 10: The ONE",
+		"quote4": "THE ONE IS THE SIMPLICITY THAT UNIFIES DIVERSITY AND OFFERS AN INFINITE NUMBER OF POSSIBILITIES.",
+		"quote4_author": "adapted from Plotinus, extract. R. Harder, Ffm, 1958, page 75"
+	},
+	"base": "/titan-one/webapp/assets/",
+	"share_url": "http://www.silhouette.com/titan-one"
+}

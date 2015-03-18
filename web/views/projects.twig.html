@@ -1,0 +1,20 @@
+{% extends "layouts/default.twig.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block innercontent %}
+
+	<ul class="uk-list uk-list-line">
+		{% for key, project in projects %}
+			<li>
+				{{ key }}
+				<ul class="flags list-inline uk-float-right">
+					{% for flag in project.languages %}
+						<li><a class="uk-button uk-button-primary" href="{{ path('project', {lang: flag, name: key}) }}">{{ flag }}</a></li>
+					{% endfor %}
+				</ul>
+			</li>
+		{% endfor %}
+	</ul>
+
+{% endblock %}
