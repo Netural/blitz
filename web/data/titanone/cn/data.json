@@ -1,0 +1,137 @@
+{
+	"metatitle": "TITAN ONE 珍藏系列",
+	"metadesc": "TITAN ONE 珍藏系列",
+	"facebook_share": "我觉得诗乐全新的 Titan ONE 珍藏系列 - 一体化创新设计棒极了。人们甚至可以虚拟试戴！ ",
+	"twitter_share": "全新 Titan ONE - 一体化创新来自 @silhouette_1964。#SilhouetteTitanONE",
+	"pinterest_share": "诗乐全新的 Titan ONE 珍藏系列 - 一体化创新。现在虚拟试戴！ ",
+	"mail_share": "探索诗乐全新的 Titan ONE 珍藏系列 - 一体化创新。现在虚拟试戴！ ",
+	"navi": {
+		"home": "首页",
+		"theone": "THE ONE",
+		"facts": "细节",
+		"interviews": "采访",
+		"wisdom": "内涵"
+	},
+	"hero": {
+		"title": "我就是我",
+		"description": "全新 Titan ONE - 一体化创新。最顶级设计的眼镜。"
+	},
+	"buttons": {
+		"try_on": "现在试戴",
+		"try_on_url": "http://www.silhouette.com/titan_one_preview",
+		"find_dealer": "查找零售商",
+		"find_dealer_url": "http://www.silhouette.com/retailer_search/"
+	},
+	"labels": {
+		"share": "说文解字："
+	},
+	"collage": {
+		"box1": {
+			"capital": "O",
+			"body": "One-Piece：一体化创新"
+		},
+		"box2": {
+			"capital": "N",
+			"body": "Nature：自然的线条，使眼镜与佩戴者自然衔接"
+		},
+		"box3": {
+			"capital": "E",
+			"body": "Excellence：精湛的工艺，“奥地利制造”的品质保证"
+		}
+	},
+	"reel": {
+		"title": "TITAN ONE 细节展现",
+		"points": [
+			{
+				"left": "33%",
+				"top": "28%",
+				"title": "一体化创新",
+				"class": "t-top",
+				"body": "中梁与眼镜腿一体成型"
+			},
+			{
+				"left": "48%",
+				"top": "57%",
+				"title": "低上框架设计",
+				"class": "t-lower",
+				"body": "通风、精致、新潮"
+			},
+			{
+				"left": "66%",
+				"top": "55%",
+				"title": "高科技钛",
+				"class": "t-lower",
+				"body": "轻巧柔韧又耐用"
+			}
+		]
+	},
+	"colors": {
+		"shiny_silver": "亮银色",
+		"matt_cold": "哑金色",
+		"dart_silver_matt": "暗银色哑光",
+		"dart_silver_shiny": "暗银色亮光"
+	},
+	"stories": [
+		{
+			"headline": "“好的设计才是最具说服力的”",
+			"subheadline": "Henrietta Thompson，《Wallpaper》杂志的自由编辑",
+			"longtext": "Henrietta Thompson 认为，好的设计才是最具说服力的，但也不能忽视产品本身给人们带来的愉悦感。 Titan ONE 便满足了她心目中的要求：彰显出佩戴者的个性，让人们看起来熠熠生辉。",
+			"link": "Henrietta 的采访全文",
+			"link_href": "http://issuu.com/silhouetteinterntaionalschmied/docs/00_us",
+			"direction": "t-story-left",
+			"image": "images/content/content7.jpg",
+			"name": "Henrietta"
+		},
+		{
+			"headline": "“幻实之间，成就非凡”。",
+			"subheadline": "Alvin Huang，Synthesis Design + Architecture 的创始人和首席设计师",
+			"longtext": "Alvin Huang 专注于富有表现力的全新艺术形式。他的设计以结构化、制造工艺和视觉等方面的标准为导向，不落窠臼，自成一家。他的设计语言遵循“形式服从性能”的原则。对他来说，Titan ONE 体现了“少即是多”这一箴言所能表达的一切。",
+			"link": "Alvin Huang 的采访全文",
+			"link_href": "http://litestyle.silhouette.com/2015/02/titan-one-alvin-huang/",
+			"direction": "t-story-right",
+			"image": "images/content/alvin_huang.jpg",
+			"name": "Huang"
+		},
+		{
+			"headline": "“设计是一项创造价值的任务”",
+			"subheadline": "Jonas Ravlo Stokke 和 Øystein Austad，Stokke Austad 的设计师和创始人",
+			"longtext": "这两位有经验的工业设计师专注于提供全面耐久的解决方案，力求将每项设计的本质发挥到极致。两人对 One-Piece（一体化）理念进行深入研究，他们自己的设计亦展现出这种潮流。同时他们还是 Titan One 最早的顾客。",
+			"link": "采访全文",
+			"link_href": "http://litestyle.silhouette.com/2015/02/titan-one-stokke-austad/",
+			"direction": "t-story-right",
+			"image": "images/content/stokke_austad.jpg",
+			"name": "Austad"
+		},
+		{
+			"headline": "“符号越小，显著性和关联性就越大”",
+			"subheadline": "Eisuke Tachikawa，NOSIGNER 的建筑师、设计师和创始人",
+			"longtext": "在他的东京工作室 Nosigner 中，Eisuke Tachikawa 致力于完成那些能够积极改变社会和未来的设计。在他看来，Titan ONE 将材料消耗降低至最小，从而呈现出可持续性的设计理念。它独特的外观与永不过时的存在感给人留下深刻印象。",
+			"link": "Eisuke 的采访全文",
+			"link_href": "http://litestyle.silhouette.com/2015/02/titan-one-eisuke-tachikawa/",
+			"direction": "t-story-left",
+			"image": "images/content/eisuke_tachikawa.jpg",
+			"name": "Tachikawa"
+		}
+	],
+	"wisdom": {
+		"title": "THE ONE 的内涵",
+		"description": "远见、智慧、创意、巧妙 - Titan ONE 将这些元素集于一身。每幅 ONE 眼镜都承载着设计的深厚内涵，在世界各个角落闪耀出夺目的光彩。"
+	},
+	"imprint": "版权声明",
+	"imprint_link": "http://www.silhouette.com/imprint",
+	"copyright": "Silhouette 2015",
+	"contact": "联系",
+	"contact_link": "http://www.silhouette.com/contact",
+	"quotes": {
+		"quote1": "单一是你的一部分，正如你是他的一部分。",
+		"quote1_author": "语出自“普罗提诺选集”，R. Harder，Ffm，1958，第 75 页",
+		"quote2": "单一产生明朗，分散产生怀疑。",
+		"quote2_author": "语出自禅宗的第三元老，赫胥黎，永恒的哲学，第 110 页",
+		"quote3": "单一不是次佳的，而是有意义的。",
+		"quote3_author": "语出自约翰·前田，简单的法则，法则 10：The ONE",
+		"quote4": "单一是集中了多样性又提供无限可能性的简朴。",
+		"quote4_author": "语出自“普罗提诺选集”，R. Harder，Ffm，1958，第 75 页"
+	},
+	"base": "/titan-one/webapp/assets/",
+	"share_url": "http://www.silhouette.com/titan-one"
+}

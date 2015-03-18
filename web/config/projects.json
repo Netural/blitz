@@ -1,0 +1,10 @@
+{
+	"titanone": {
+		"datafile": "web/data/titanone/{lang}/data.json",
+		"languages": ["cn", "de", "en", "es", "fr", "it", "jp", "kr", "us"]
+	},
+	"titantwo": {
+		"datafile": "web/data/titanonetwo/{lang}/data.json",
+		"languages": ["cn", "de", "en", "es", "fr", "it", "jp", "kr", "us"]
+	}
+}

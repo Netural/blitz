@@ -1,0 +1,57 @@
+{% extends "layouts/default.twig.html" %}
+
+{% block title %}Edit Page{% endblock %}
+{% block head %}
+	{{ parent() }}
+{% endblock %}
+
+{% block content %}
+
+	<div id="previewmode-editor" data-remote-url="{{ remote }}">
+		<div class="uk-margin-top uk-margin-left uk-margin-right">
+			<form class="uk-form" id="blitz-form">
+				<div class="toolbar">
+					<div class="uk-float-right">
+						<a href="#" class="uk-button uk-button-primary" data-save>Save</a>
+						<a href="{{ path('blitz_logout') }}" class="uk-button">Logout</a>
+					</div>
+					<a href="#" class="uk-button uk-button-success"><i class="uk-icon-bolt"></i></a> <span data-flash-message></span>
+				</div>
+				<div id="nestables">
+
+				</div>
+			</form>
+		</div>
+	</div>
+	<div id="site">
+
+	</div>
+
+	{% verbatim %}
+	<script id="nestable-wrapper" type="text/template">
+		<ul class="uk-nestable" data-uk-nestable>
+			{{{ nestables }}}
+		</ul>
+	</script>
+
+	<script id="nestable-item" type="text/template">
+		<li>
+			<div class="uk-nestable-item">
+				<div class="uk-nestable-handle"></div>
+				{{^ val }}
+				<div data-nestable-action="toggle"></div>
+				{{/ val }}
+				{{ key }}
+				{{# val }}
+				<div class="uk-form-row">
+					<textarea rows="1" name="{{ name }}" class="uk-width-1-1 flexinput" data-input>{{ val }}</textarea>
+				</div>
+				{{/ val }}
+			</div>
+			{{{ childs }}}
+		</li>
+	</script>
+	{% endverbatim %}
+
+
+{% endblock %}

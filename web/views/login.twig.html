@@ -1,0 +1,32 @@
+{% extends "layouts/default.twig.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+
+	<div class="uk-container uk-container-center uk-margin-large-top">
+		<div class="uk-width-1-4 uk-container-center">
+			<form action="/blitz/check_login" method="post" class="uk-form">
+				{% if error %}
+					<div class="uk-alert">
+			    		{{ error }}
+			    	</div>
+				{% endif %}
+			    <div class="uk-form-row">
+			    	<labe class="uk-form-label">User</label>
+			    	<div class="uk-form-controls">
+			    		<input class="uk-width-1-1" type="text" name="_username" value="{{ last_username }}" />
+			    	</div>
+			    </div>
+			    <div class="uk-form-row uk-margin-bottom">
+			    	<label class="uk-form-label">Password</label>
+			    	<div class="uk-form-controls">
+			    		<input class="uk-width-1-1" type="password" name="_password" value="" />
+			    	</div>
+			    </div>
+			    <button type="submit" class="uk-button uk-button-primary">Login</button>
+			</form>
+		</div>
+	</div>
+
+{% endblock %}
