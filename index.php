@@ -54,9 +54,20 @@ $app->get('/login', function(Request $request) use ($app) {
     ));
 });
 
-$app->get('/public/blitz/project/{name}/{lang}.json', function(Request $request, $name, $lang) use($app) {
-    $data['datafile'] = str_replace('{lang}', $lang, $app['projects'][$name]['datafile']);
-    $data['datafile'] = str_replace('.json', '[draft].json', $data['datafile']);
+$app->get('/public/blitz/project/{name}/{lang}', function(Request $request, $name, $lang) use($app) {
+    $original = str_replace('{lang}', $lang, $app['projects'][$name]['datafile']);
+    $draft = str_replace('.json', '[draft].json', $original);
+
+    if (!file_exists($draft)) {
+        if (!file_exists($original)) {
+            return 'File not exists';
+        } else {
+            $app['filesystem']->copy($original, $draft);
+        }
+    }
+
+    $data['datafile'] = $draft;
+
     $json = json_decode(file_get_contents($data['datafile']));
     return $app->json($json);
 });
@@ -73,7 +84,7 @@ $app->get('/blitz/project/{name}/{lang}', function(Request $request, $name, $lan
         return $app['twig']->render('error.twig.html', array('message' => 'Project not found'));
     }
 
-    $data['remote'] = '/public/blitz/project/'.$name.'/'.$lang.'.json';
+    $data['remote'] = '/public/blitz/project/'.$name.'/'.$lang;
     $data['datafile'] = str_replace('{lang}', $lang, $app['projects'][$name]['datafile']);
 
     return $app['twig']->render('view.twig.html', $data);

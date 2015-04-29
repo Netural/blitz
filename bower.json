@@ -1,0 +1,25 @@
+{
+  "name": "blitz",
+  "version": "0.0.1",
+  "homepage": "https://github.com/Netural/blitz",
+  "authors": [
+    "Alex Feigi <alexander.feiglstorfer@netural.com>"
+  ],
+  "description": "Blitz Json Editor",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "uikit": "~2.18.0",
+    "humanize-plus": "~1.5.0",
+    "hogan": "~3.0.2"
+  }
+}
