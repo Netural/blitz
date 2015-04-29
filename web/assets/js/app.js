@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	
+	var $editor = $('#previewmode-editor');
 	var App = {
 		$nestableWrapper: Hogan.compile($('#nestable-wrapper').html()),
 		$nestableItem: Hogan.compile($('#nestable-item').html()),
@@ -8,9 +9,9 @@ $(document).ready(function(){
 		$iframeContainer: null,
 		$iframe: null,
 		formWidth: 360,
-		siteUrl: 'http://localhost:8000/?lang=en&draft=1',
+		siteUrl: $editor.data('site-url'),
 		currentUrl: document.URL,
-		remoteUrl: $('#previewmode-editor').data('remote-url'),
+		remoteUrl: $editor.data('remote-url'),
 		init: function() {
 			var that = this;
 			$.ajax({
@@ -30,6 +31,11 @@ $(document).ready(function(){
 				that.save();
 			});
 
+			$('[data-publish]').click(function(e){
+				e.preventDefault();
+				that.save('publish');
+			});
+
 			$(document).on('change', '[data-input]', function() {
 				that.save();
 			});
@@ -40,6 +46,16 @@ $(document).ready(function(){
 
 			$(document).on('blur', '[data-input]', function() {
 				$(this).height('auto');
+			});
+
+			$(document).on('click', '[data-add-btn]', function() {
+				var $list = $(this).closest('.uk-nestable-item').next();
+				var $listItemCopy = $list.find('> .uk-nestable-list-item').clone();
+				$list.append($listItemCopy);
+			});
+
+			$(document).on('click', '[data-remove-btn]', function() {
+				$(this).closest('.uk-nestable-item').remove();
 			});
 		},
 		loadIframe: function() {
@@ -66,10 +82,10 @@ $(document).ready(function(){
 		reloadIframe: function() {
 			this.$iframe.attr('src', this.siteUrl);
 		},
-		save: function() {
+		save: function(mode) {
 			var that = this;
 			$.ajax({
-				url: that.currentUrl + '/save',
+				url: that.currentUrl + (mode == 'publish' ? '/publish' : '/save'),
 				type: 'POST',
 				data: $('#blitz-form').serialize(),
 				dataType: 'json',
@@ -98,6 +114,7 @@ $(document).ready(function(){
 				var value = val;
 				var humanKey = key;
 				var inputname = name + '[' + key + ']';
+				var isarray = $.isArray(val);
 
 				if (typeof key === 'string') {
 					if (key.indexOf(':protected') != -1) {
@@ -115,7 +132,8 @@ $(document).ready(function(){
 					childs += '</ul>';
 					value = false;
 				}
-				items += that.$nestableItem.render({name: inputname, key: humanKey, val: value, childs: childs});
+				
+				items += that.$nestableItem.render({name: inputname, key: humanKey, val: value, childs: childs, isarray: isarray});
 			});
 			return items;
 		},

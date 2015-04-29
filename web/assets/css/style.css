@@ -7605,6 +7605,7 @@ a.uk-thumbnail:focus {
   position: fixed;
   top: 0;
   height: 100%;
+  box-sizing: border-box;
   background: #fff;
   background-clip: padding-box; }
 
@@ -7621,7 +7622,7 @@ a.uk-thumbnail:focus {
   border-right: 1px solid rgba(0, 0, 0, 0.1); }
 
 .toolbar {
-  width: 330px;
+  width: 329px;
   background-color: #FFF;
   padding: 15px 15px 15px 15px;
   border-bottom: 1px solid #CCC;

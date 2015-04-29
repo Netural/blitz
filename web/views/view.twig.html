@@ -7,15 +7,16 @@
 
 {% block content %}
 
-	<div id="previewmode-editor" data-remote-url="{{ remote }}">
+	<div id="previewmode-editor" data-remote-url="{{ remote }}" data-site-url="{{ site }}">
 		<div class="uk-margin-top uk-margin-left uk-margin-right">
 			<form class="uk-form" id="blitz-form">
 				<div class="toolbar">
 					<div class="uk-float-right">
+						<a href="#" class="uk-button uk-button-primary" data-publish>Publish</a>
 						<a href="#" class="uk-button uk-button-primary" data-save>Save</a>
 						<a href="{{ path('blitz_logout') }}" class="uk-button">Logout</a>
 					</div>
-					<a href="#" class="uk-button uk-button-success"><i class="uk-icon-bolt"></i></a> <span data-flash-message></span>
+					<a href="{{ path('projects') }}" class="uk-button uk-button-success"><i class="uk-icon-bolt"></i></a> <span data-flash-message></span>
 				</div>
 				<div id="nestables">
 
@@ -39,6 +40,9 @@
 			<div class="uk-nestable-item">
 				<div class="uk-nestable-handle"></div>
 				{{^ val }}
+				{{# isarray }}
+				<a href="#" class="uk-float-right uk-margin-left" data-add-btn><i class="uk-icon-plus"></i></a>
+				{{/ isarray }}
 				<div data-nestable-action="toggle"></div>
 				{{/ val }}
 				{{ key }}
@@ -51,6 +55,7 @@
 			{{{ childs }}}
 		</li>
 	</script>
+	{# <a href="#" class="uk-float-right" data-remove-btn><i class="uk-icon-trash"></i></a> #}
 	{% endverbatim %}
 
 

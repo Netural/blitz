@@ -36,7 +36,6 @@ $app['security.firewalls'] = array(
 );
 
 // Loading the config
-
 $app['projects'] = json_decode(file_get_contents('web/config/projects.json'), true);
 
 
@@ -44,7 +43,7 @@ $app['projects'] = json_decode(file_get_contents('web/config/projects.json'), tr
 
 $app->get('/', function() use($app) {
     #$password = $app['security.encoder.digest']->encodePassword('', '');
-    return 'Please login';
+    return $app->redirect('/login');
 });
 
 $app->get('/login', function(Request $request) use ($app) {
@@ -55,6 +54,17 @@ $app->get('/login', function(Request $request) use ($app) {
 });
 
 $app->get('/public/blitz/project/{name}/{lang}', function(Request $request, $name, $lang) use($app) {
+    $datafile = str_replace('{lang}', $lang, $app['projects'][$name]['datafile']);
+    
+    if (!file_exists($datafile)) {
+        return $app->json(array('error' => 'File not found'));
+    }
+
+    $json = json_decode(file_get_contents($datafile));
+    return $app->json($json);
+});
+
+$app->get('/blitz/project/{name}/{lang}/json', function(Request $request, $name, $lang) use($app) {
     $original = str_replace('{lang}', $lang, $app['projects'][$name]['datafile']);
     $draft = str_replace('.json', '[draft].json', $original);
 
@@ -77,14 +87,15 @@ $app->get('/blitz/logout');
 
 $app->get('/blitz', function(Request $request) use ($app) {
     return $app['twig']->render('projects.twig.html', array('projects' => $app['projects']));
-});
+})->bind('projects');
 
 $app->get('/blitz/project/{name}/{lang}', function(Request $request, $name, $lang) use($app) {
     if (!isset($app['projects'][$name])) {
         return $app['twig']->render('error.twig.html', array('message' => 'Project not found'));
     }
 
-    $data['remote'] = '/public/blitz/project/'.$name.'/'.$lang;
+    $data['remote'] = '/blitz/project/'.$name.'/'.$lang.'/json';
+    $data['site'] = $app['projects'][$name]['site'];
     $data['datafile'] = str_replace('{lang}', $lang, $app['projects'][$name]['datafile']);
 
     return $app['twig']->render('view.twig.html', $data);

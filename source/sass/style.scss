@@ -11,6 +11,7 @@ $nestable-padding-left: 20px;
 	position: fixed;
 	top: 0;
 	height: 100%;
+	box-sizing: border-box;
 	background: #fff;
 	background-clip: padding-box;
 }
@@ -30,7 +31,7 @@ $nestable-padding-left: 20px;
 }
 
 .toolbar {
-	width: 330px;
+	width: 329px;
 	background-color: #FFF;
 	padding: 15px 15px 15px 15px;
 	border-bottom: 1px solid #CCC;
