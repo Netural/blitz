@@ -42,8 +42,8 @@ $app['projects'] = json_decode(file_get_contents('web/config/projects.json'), tr
 // Defining the routes
 
 $app->get('/', function() use($app) {
-    #$password = $app['security.encoder.digest']->encodePassword('', '');
-    return $app->redirect('/login');
+    $password = $app['security.encoder.digest']->encodePassword('test', '');
+    return 'Put this value to the users array in index.php:' . $password;
 });
 
 $app->get('/login', function(Request $request) use ($app) {
