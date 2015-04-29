@@ -9,6 +9,16 @@
             "icon": "uk-icon-cog",
             "headline": "Sample Heading",
             "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "icon": "uk-icon-cog",
+            "headline": "Sample Heading",
+            "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "icon": "uk-icon-cog",
+            "headline": "Sample Heading",
+            "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         }
     ]
 }

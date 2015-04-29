@@ -48,14 +48,36 @@ $(document).ready(function(){
 				$(this).height('auto');
 			});
 
-			$(document).on('click', '[data-add-btn]', function() {
+			$(document).on('click', '[data-add-btn]', function(e) {
+				e.preventDefault();
 				var $list = $(this).closest('.uk-nestable-item').next();
-				var $listItemCopy = $list.find('> .uk-nestable-list-item').clone();
+				var $listItemCopy = $list.find('> .uk-nestable-list-item:first-child').clone();
+				var listItems = $list.find('> li').length;
+
+				$listItemCopy.find('[data-input]').each(function(e) {
+					var oldName = $(this).attr('name');
+					$(this).attr('name', oldName.replace('[0]', '['+listItems+']'));
+				});
+
 				$list.append($listItemCopy);
+
+				that.save();
 			});
 
-			$(document).on('click', '[data-remove-btn]', function() {
-				$(this).closest('.uk-nestable-item').remove();
+			$(document).on('click', '[data-remove-btn]', function(e) {
+				e.preventDefault();
+				var list = $(this).closest('.uk-nestable-list');
+				$(this).closest('li').remove();
+				that.reindex(list);
+				that.save();
+			});
+		},
+		reindex: function(list) {
+			list.find('> li').each(function(index) {
+				var mask = $(this).find('> ul').data('mask');
+				$(this).find('[data-input]').each(function() {
+					$(this).attr('name', mask.replace('#', index) + '['+$(this).data('key')+']');
+				});
 			});
 		},
 		loadIframe: function() {
@@ -84,6 +106,7 @@ $(document).ready(function(){
 		},
 		save: function(mode) {
 			var that = this;
+
 			$.ajax({
 				url: that.currentUrl + (mode == 'publish' ? '/publish' : '/save'),
 				type: 'POST',
@@ -115,6 +138,8 @@ $(document).ready(function(){
 				var humanKey = key;
 				var inputname = name + '[' + key + ']';
 				var isarray = $.isArray(val);
+				var isitem = false;
+				var mask = '';
 
 				if (typeof key === 'string') {
 					if (key.indexOf(':protected') != -1) {
@@ -124,16 +149,18 @@ $(document).ready(function(){
 					humanKey = Humanize.capitalizeAll(humanKey);
 				}
 				if (typeof key === 'number') {
-					humanKey = 'Item Nr. ' + humanKey;
+					humanKey = 'Item';
+					isitem = true;
+					mask = name + '[#]';
 				}
 				if (typeof val === 'object') {
-					childs += '<ul>';
+					childs += '<ul data-mask="'+mask+'">';
 					childs += that.renderItems(val, inputname);
 					childs += '</ul>';
 					value = false;
 				}
-				
-				items += that.$nestableItem.render({name: inputname, key: humanKey, val: value, childs: childs, isarray: isarray});
+
+				items += that.$nestableItem.render({isitem: isitem, name: inputname, key: key, humanKey: humanKey, val: value, childs: childs, isarray: isarray});
 			});
 			return items;
 		},

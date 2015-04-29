@@ -40,22 +40,27 @@
 			<div class="uk-nestable-item">
 				<div class="uk-nestable-handle"></div>
 				{{^ val }}
-				{{# isarray }}
-				<a href="#" class="uk-float-right uk-margin-left" data-add-btn><i class="uk-icon-plus"></i></a>
-				{{/ isarray }}
-				<div data-nestable-action="toggle"></div>
+					{{# isarray }}
+						<a href="#" class="uk-float-right uk-margin-left" data-add-btn><i class="uk-icon-plus"></i></a>
+					{{/ isarray }}
+					<div data-nestable-action="toggle"></div>
 				{{/ val }}
-				{{ key }}
+
+				{{# isitem }}
+					<a href="#" class="uk-float-right" data-remove-btn><i class="uk-icon-trash"></i></a>
+				{{/ isitem }}
+
+				{{ humanKey }}
+
 				{{# val }}
-				<div class="uk-form-row">
-					<textarea rows="1" name="{{ name }}" class="uk-width-1-1 flexinput" data-input>{{ val }}</textarea>
-				</div>
+					<div class="uk-form-row">
+						<textarea data-key="{{ key }}" rows="1" name="{{ name }}" class="uk-width-1-1 flexinput" data-input>{{ val }}</textarea>
+					</div>
 				{{/ val }}
 			</div>
 			{{{ childs }}}
 		</li>
 	</script>
-	{# <a href="#" class="uk-float-right" data-remove-btn><i class="uk-icon-trash"></i></a> #}
 	{% endverbatim %}
 
 
